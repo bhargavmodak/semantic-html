@@ -1,0 +1,60 @@
+#theme-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+fieldset {
+    border: 2px solid var(--pico-muted-border-color);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    padding: 20px;
+    border: 1px solid #ccc;
+
+    transform: translate(-100%);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.aside-active {
+    transform: translate(0);
+}
+
+#nav-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+#nav-btn.fa-times {
+    left: 170px;
+}
+
+#content {
+    padding: 30px 50px;
+    transition: 0.3s;
+    border: 1px solid #ccc;
+}
+
+.content-active {
+    padding: 30px;
+    margin-left: 200px;
+    transition: 0.3s;
+}

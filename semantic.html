@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="color-scheme" content="light dark" />
+        <title>How to write Semantic HTMl</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.cyan.min.css"
+        />
+        <link rel="stylesheet" href="semantic.css" />
+        <script
+            src="https://kit.fontawesome.com/180bb0a7e4.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <aside role="navigation">
+            <nav>
+                <h3><code>&lt;aside&gt;</code></h3>
+                <ul class="container">
+                    <li><a href="#typography">Typography</a></li>
+                    <li><a href="#lists">Lists</a></li>
+                    <li><a href="#code">Code</a></li>
+                    <li><a href="#tables">Tables</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                    <li><a href="#images">Images</a></li>
+                    <li><a href="#audio">Audio</a></li>
+                    <li><a href="#video">Video</a></li>
+                    <li><a href="#aria">ARIA</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div id="content">
+            <header class="container">
+                <i
+                    id="nav-btn"
+                    aria-roledescription="navigation button"
+                    class="fa-solid fa-bars"
+                ></i>
+                <hgroup>
+                    <h1>Semantic HTML</h1>
+                    <h2>
+                        How to write HTML that accessibility add-ons can read.
+                    </h2>
+                </hgroup>
+                <time></time>
+                <hr />
+            </header>
+
+            <main>
+                <section id="typography">
+                    <h2>Typography</h2>
+                    <p>
+                        The <code>&lt;h1&gt;</code> to
+                        <code>&lt;h6&gt;</code> elements are used to define
+                        headings. The <code>&lt;p&gt;</code> element is used to
+                        define a paragraph.
+                    </p>
+                    <article>
+                        <h1>Heading 1</h1>
+                        <h2>Heading 2</h2>
+                        <h3>Heading 3</h3>
+                        <h4>Heading 4</h4>
+                        <h5>Heading 5</h5>
+                        <h6>Heading 6</h6>
+                    </article>
+                    <h3>Inline tags</h3>
+                    <p>
+                        The <code>&lt;strong&gt;</code> element
+                        <strong>is used to define important text</strong>, but
+                        <code>&lt;b&gt;</code> is only used for
+                        <b>visual styles.</b>
+                    </p>
+                    <p>
+                        The <code>&lt;em&gt;</code> element
+                        <em>is used to define emphasized text</em>, but
+                        <code>&lt;i&gt;</code> is only used for
+                        <i>visual styles.</i>
+                    </p>
+                    <p>
+                        The <code>&lt;mark&gt;</code> element
+                        <mark>is used to highlight text</mark>.
+                    </p>
+                    <p>
+                        The <code>&lt;del&gt;</code> element
+                        <del>is used to define deleted text</del>.
+                    </p>
+                    <p>
+                        The <code>&lt;ins&gt;</code> element
+                        <ins>is used to define inserted text</ins>.
+                    </p>
+                    <p>
+                        The <code>&lt;sub&gt;</code> element
+                        <sub>is used to define subscripted text</sub>.
+                    </p>
+                    <p>
+                        The <code>&lt;sup&gt;</code> element
+                        <sup>is used to define superscripted text</sup>.
+                    </p>
+                    <p>
+                        The <code>&lt;q&gt;</code> element is used because
+                        different languages have different quotation marks. This
+                        element handles that for you. <br />
+                        <q>What's in a name?</q>, says Juliet. Use the
+                        <code>&lt;q&gt;</code> element instead of
+                        <kbd>"</kbd> or <kbd>'</kbd>.
+                    </p>
+                    <p>
+                        The <code>&lt;kbd&gt;</code> element, used above, is
+                        used when we want to show keyboard input.
+                        <kbd>Ctrl</kbd> + <kbd>C</kbd> is the copy command.
+                    </p>
+                    <p>
+                        There are other inline elements like the
+                        <code>&lt;abbr&gt;</code> element, which is used to
+                        define an abbreviation or an acronym, like
+                        <abbr title="HyperText Markup Language">HTML</abbr>.
+                        Hover over the abbreviation to see the full text.
+                    </p>
+                    <p>
+                        The <code>&lt;cite&gt;</code> element is used to define
+                        the title of a work, like a book, a song, or a movie.
+                        The title of this article is <cite>Semantic HTML</cite>.
+                    </p>
+                    <p>
+                        Other inline elements include the
+                        <code>&lt;time&gt;</code>, <code>&lt;code&gt;</code>,
+                        <code>&lt;var&gt;</code>, <code>&lt;samp&gt;</code>,
+                        <code>&lt;dfn&gt;</code>, <code>&lt;span&gt;</code>, and
+                        <code>&lt;br&gt;</code> elements.
+                    </p>
+                    <h3>
+                        <code>&lt;blockquote&gt;</code> and
+                        <code>&lt;cite&gt;</code>
+                    </h3>
+                    <blockquote>
+                        <p>
+                            The <code>&lt;blockquote&gt;</code> element is used
+                            to define a section that is quoted from another
+                            source. Browsers usually indent the text inside the
+                            <code>&lt;blockquote&gt;</code> element.
+                        </p>
+                        <cite>
+                            -
+                            <a
+                                href="https://www.w3schools.com/html/html5_semantic_elements.asp"
+                                >W3Schools</a
+                            >
+                        </cite>
+                    </blockquote>
+                    <h3>Languages</h3>
+                    <p>
+                        The <code>&lt;html&gt;</code> element has a
+                        <code>lang</code> attribute that can be used to specify
+                        the language of the document. This is important for
+                        screen readers and other accessibility tools.
+                    </p>
+                    <article>
+                        <p>
+                            Say for example you are speaking English and then
+                            suddenly
+                            <span lang="fr">vous parlez français</span>. The
+                            <code>lang</code> attribute is used to specify the
+                            language of the text. It's not visually displayed,
+                            but <u>accessibility</u> tools can use it.
+                        </p>
+                    </article>
+                    <p>
+                        The <code>&lt;html&gt;</code> element can also have a
+                        <code>dir</code> attribute that can be used to specify
+                        the direction of the text. This is important for
+                        languages that are read from right to left.
+                    </p>
+                    <article>
+                        <p>Here's some Hebrew text:</p>
+                        <p dir="rtl">
+                            נח אוהב את יעקב <br />
+                            <small> Noah loves Jacob </small>
+                        </p>
+                        <p>
+                            The <code>dir</code> attribute is used to specify
+                            the direction of the text. Note we also used the
+                            <code>&lt;small&gt;</code> element to make the
+                            translation smaller.
+                        </p>
+                    </article>
+                    <hr />
+                </section>
+                <section id="lists">
+                    <h2>Lists</h2>
+                    <h3>Ordered Lists</h3>
+                    <ol>
+                        <li>Note that the navigation is an unordered list.</li>
+                        <li>This is helpful for screen readers.</li>
+                        <li>It's also helpful for search engines.</li>
+                    </ol>
+                    <h3>Unordered Lists</h3>
+                    <ul>
+                        <li>First item</li>
+                        <li>Second item</li>
+                        <li>Third item</li>
+                    </ul>
+                    <h3>Definition Lists</h3>
+                    <dl>
+                        <dt>HTML</dt>
+                        <dd>HyperText Markup Language</dd>
+                        <dt>CSS</dt>
+                        <dd>Cascading Style Sheets</dd>
+                        <dt>JS</dt>
+                        <dd>JavaScript</dd>
+                    </dl>
+                </section>
+                <section id="code">
+                    <h2>Code</h2>
+                    <p>
+                        The <code>&lt;code&gt;</code> element is used to define
+                        a piece of computer code. The content inside is
+                        displayed in a monospace font.
+                    </p>
+                    <p>
+                        The <code>&lt;pre&gt;</code> element is used to define
+                        preformatted text. The text inside a
+                        <code>&lt;pre&gt;</code> element is displayed in a
+                        fixed-width font, and it preserves both spaces and line
+                        breaks. Both <code>&lt;code&gt;</code> and
+                        <code>&lt;pre&gt;</code> are used in conjunction with
+                        each other.
+                    </p>
+                    <pre> <code> &lt;html&gt; &lt;head&gt; &lt;title&gt;Title&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;h1&gt;Heading&lt;/h1&gt; &lt;p&gt;Paragraph&lt;/p&gt; &lt;/body&gt; &lt;/html&gt; </code> </pre>
+                </section>
+                <section id="tables">
+                    <h2>Tables</h2>
+                    <table>
+                        <caption>
+                            Table Caption. The
+                            <code>&lt;caption&gt;</code>
+                            tag is used, again, for accessibility tools to call
+                            out the name of the table/picture.
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>Tag name</th>
+                                <th>Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>&lt;table&gt;</code></td>
+                                <td>Defines a table</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;tr&gt;</code></td>
+                                <td>Defines a row in a table</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;th&gt;</code></td>
+                                <td>Defines a header cell in a table</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;td&gt;</code></td>
+                                <td>Defines a cell in a table</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;thead&gt;</code></td>
+                                <td>
+                                    Groups the header content in a table. This
+                                    is used for styling purposes. Also, if you
+                                    are using a library like
+                                    <a
+                                        href="https://www.kryogenix.org/code/browser/sorttable/"
+                                        >sorttable</a
+                                    >, it will ignore the header row, and add
+                                    arrows to the header row.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;tbody&gt;</code></td>
+                                <td>
+                                    Groups the body content in a table. This is
+                                    used for styling purposes. Also, if you are
+                                    using a library like
+                                    <a
+                                        href="https://www.kryogenix.org/code/browser/sorttable/"
+                                        >sorttable</a
+                                    >, it will only sort the tbody.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;tfoot&gt;</code></td>
+                                <td>
+                                    Groups the footer content in a table. This
+                                    is used for styling purposes. For example
+                                    when calculating the average age of a group
+                                    of people. It can also be used for
+                                    calcualting 'TOTAL' values. If you are using
+                                    a library like
+                                    <a
+                                        href="https://www.kryogenix.org/code/browser/sorttable/"
+                                        >sorttable</a
+                                    >, it will ignore the footer row. You can
+                                    place the total of a column in the footer by
+                                    using dummy <code>&lt;tr&gt;</code> tags
+                                    with the <code>colspan</code> attribute.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section id="forms">
+                    <h2>Forms</h2>
+                    <p>
+                        There are many form elements in HTML. The
+                        <code>&lt;form&gt;</code> element is used to create an
+                        HTML form for user input. The
+                        <code>&lt;input&gt;</code> element is the most used form
+                        element. The <code>&lt;label&gt;</code> element is used
+                        to define a label for many form elements.
+                    </p>
+                    <p>
+                        The <code>&lt;fieldset&gt;</code> element is used to
+                        group related elements in a form. PicoCSS allows you to
+                        also horizontally group related inputs with the
+                        <code>role='group'</code> on the
+                        <code>&lt;fieldset&gt;</code> element. One could also
+                        use <code> class="grid" </code> to achieve similar
+                        effects.
+                    </p>
+                    <p>
+                        The <code>&lt;legend&gt;</code> element defines a
+                        caption for the <code>&lt;fieldset&gt;</code> element.
+                        It helps screen readers understand the purpose of the
+                        group. (Selection, Contact Information, etc.)
+                    </p>
+                    <article>
+                        <form>
+                            <fieldset class="grid">
+                                <legend>Personal Information</legend>
+                                <label
+                                    >Name:
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        aria-invalid="true"
+                                    />
+                                    <small
+                                        >Aria roles help know blank fields.
+                                    </small>
+                                </label>
+                                <label for="email">
+                                    Email:
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                    />
+                                    <small>
+                                        The <code>&lt;small&gt;</code> tag helps
+                                        provide context and tips.
+                                    </small>
+                                </label>
+                                <label for="phone">
+                                    Phone:
+                                    <input type="tel" id="phone" name="phone" />
+                                </label>
+                            </fieldset>
+                            <fieldset class="grid">
+                                <legend>Preferences</legend>
+                                <label for="color">
+                                    Favorite Color:
+                                    <input
+                                        type="color"
+                                        id="color"
+                                        name="color"
+                                    />
+                                </label>
+                                <label for="date">
+                                    Date of Birth:
+                                    <input type="date" id="date" name="date" />
+                                </label>
+                                <label for="time">
+                                    Time of Birth:
+                                    <input type="time" id="time" name="time" />
+                                </label>
+                            </fieldset>
+                            <fieldset class="grid">
+                                <legend>Files and Folders</legend>
+                                <label for="file">
+                                    File:
+                                    <input type="file" id="file" name="file" />
+                                </label>
+                                <label for="folder">
+                                    Folder:
+                                    <input
+                                        type="file"
+                                        id="folder"
+                                        name="folder"
+                                        webkitdirectory
+                                    />
+                                </label>
+                            </fieldset>
+                            <fieldset role="group">
+                                <legend>
+                                    Actions &#40;With Role Group&#41;
+                                </legend>
+                                <input type="reset" value="Reset" />
+                                <input type="submit" value="Submit" />
+                            </fieldset>
+                        </form>
+                    </article>
+                </section>
+                <section id="images">
+                    <h2>Images</h2>
+                    <p>
+                        The <code>&lt;img&gt;</code> element is used to embed an
+                        image in an HTML page. The <code>alt</code> attribute
+                        provides an alternate text for an image, if the image
+                        cannot be displayed.
+                    </p>
+                    <article>
+                        <img
+                            src="https://picsum.photos/200/300"
+                            alt="Placeholder Image"
+                        />
+                    </article>
+                    <h3>The <code>&lt;img srcset&gt;</code> attribute</h3>
+                    <p>
+                        The <code>&lt;img srcset&gt;</code> attribute is used to
+                        provide multiple image files for different device
+                        resolutions. The browser will choose the most suitable
+                        image.
+                    </p>
+                    <pre> <code> &lt;img src="image.jpg" alt="Image" srcset="image.jpg 200w, image-2x.jpg 400w"&gt; </code> </pre>
+                    OR, if using pixel density descriptors:
+                    <pre> <code> &lt;img src="image.jpg" alt="Image" srcset="image.jpg 1x, image-2x.jpg 2x"&gt; </code> </pre>
+                    <p>
+                        Pixel density descriptors are used to provide images for
+                        different pixel densities. The
+                        <code>1x</code> descriptor is used for regular displays,
+                        and the <code>2x</code> descriptor is used for
+                        high-resolution displays. <br />
+                        <br />
+                        It is incorrect to mix width descriptors and pixel
+                        density descriptors in the same
+                        <code>srcset</code> attribute. Duplicate descriptors
+                        (for instance, two sources in the same
+                        <code>srcset</code> which are both described with
+                        <code>2x</code>) are also invalid.
+                    </p>
+
+                    <h3>The <code>&lt;img sizes&gt;</code> attribute</h3>
+                    <p>
+                        The <code>&lt;sizes&gt;</code> attribute is used to
+                        provide the browser with information about the viewport.
+                        The browser will choose the most suitable image based on
+                        the viewport.
+                    </p>
+                    <p>
+                        If the <code>srcset</code> attribute uses width
+                        descriptors, the <code>sizes</code> attribute must also
+                        be present, or the <code>srcset</code>
+                        itself will be ignored.
+                    </p>
+                    <pre> <code> &lt;img src="image.jpg" alt="Image" sizes="(max-width: 600px) 200px, 50vw"&gt; </code> </pre>
+
+                    <h3>The <code>&lt;picture&gt;</code> element</h3>
+                    <p>
+                        The <code>&lt;picture&gt;</code> element is used to
+                        define an image. The <code>&lt;source&gt;</code> element
+                        is used to provide multiple sources for the browser to
+                        choose from.
+                    </p>
+                    <pre> <code>&lt;picture&gt; 
+    &lt;source srcset="image.jpg" media="(max-width: 600px)"&gt;
+    &lt;img src="image.jpg" alt="Image"&gt; 
+&lt;/picture&gt; </code> </pre>
+                    <p>
+                        <h4>Why use a picture element?</h4>
+                        In HTML, the "picture" element is used to provide multiple image options based on different screen sizes or conditions, while the "img" element is used to display a single image without any built-in adaptability; essentially, "picture" allows for responsive image selection, whereas "img" is a simple image embedder. 
+                    </p>
+                </section>
+                <section id="audio">
+                    <h2>Audio</h2>
+                    <p>
+                        The <code>&lt;audio&gt;</code> element is used to embed
+                        sound content in an HTML document. The
+                        <code>controls</code> attribute adds audio controls,
+                        like play, pause, and volume.
+                    </p>
+                    <article>
+                        <audio controls>
+                            <source
+                                src="https://www.w3schools.com/html/horse.mp3"
+                                type="audio/mpeg"
+                            />
+                            Your browser does not support the audio element.
+                        </audio>
+                    </article>
+                    <h3>The <code>&lt;source&gt;</code> element</h3>
+                    <p>
+                        The <code>&lt;source&gt;</code> element performs different functions depending on the context in which it is used. In the context of the <code>&lt;audio&gt;</code> element, the <code>&lt;source&gt;</code> element is used to specify alternative audio files which the browser may choose from. The browser will use the first recognized format. The <code>type</code> attribute is used to specify the media type of the <code>src</code> attribute.
+                    </p>
+                    <pre> <code> &lt;audio controls&gt;
+    &lt;source src="horse.mp3" type="audio/mpeg"&gt;
+    &lt;source src="horse.ogg" type="audio/ogg"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt; </code> </pre>
+
+                    <h3>The <code>&lt;track&gt;</code> element</h3>
+                    <p>
+                        The <code>&lt;track&gt;</code> element is used to specify text tracks for video elements. The <code>&lt;track&gt;</code> element is used in conjunction with the <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> elements. The <code>src</code> attribute specifies the URL of the track file. The <code>srclang</code> attribute specifies the language of the track text data. The <code>label</code> attribute specifies the title of the text track. The <code>kind</code> attribute specifies the kind of text track.
+                    </p>
+                    <pre> <code> &lt;audio controls&gt;
+    &lt;source src="horse.mp3" type="audio/mpeg"&gt;
+    &lt;track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English"&gt;
+    &lt;track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt; </code> </pre>
+
+                    <h3>Audio Attributes</h3>
+                    <p>
+                        The <code>autoplay</code> attribute is used to specify that the audio will start playing as soon as it is ready. The <code>loop</code> attribute is used to specify that the audio will start over again, every time it is finished. The <code>preload</code> attribute is used to specify that the audio will be loaded when the page loads.
+                    </p>
+                    <pre> <code> &lt;audio controls autoplay loop preload="auto"&gt;
+    &lt;source src="horse.mp3" type="audio/mpeg"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt; </code> </pre>
+
+                    <h3>Audio Events</h3>
+                    <p>
+                        The <code>onplay</code> event occurs when the audio has started playing. The <code>onpause</code> event occurs when the audio has been paused. The <code>onended</code> event occurs when the audio has ended.
+                    </p>
+                    <pre> <code> &lt;audio controls onplay="alert('The audio has started playing.')" onpause="alert('The audio has been paused.')" onended="alert('The audio has ended.')"&gt;
+    &lt;source src="horse.mp3" type="audio/mpeg"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt; </code> </pre>
+
+                    <h3>Audio Methods</h3>
+                    <p>
+                        The <code>play()</code> method starts playing the audio. The <code>pause()</code> method pauses the audio. The <code>load()</code> method reloads the audio.
+                    </p>
+                    <pre> <code> &lt;audio id="myAudio" controls&gt;
+    &lt;source src="horse.mp3" type="audio/mpeg"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+
+&lt;script&gt;
+    var x = document.getElementById("myAudio");
+
+    function playAudio() {
+        x.play();
+    }
+
+    function pauseAudio() {
+        x.pause();
+    }
+&lt;/script&gt; </code> </pre>
+                </section>
+                <section id="video">
+                    <h2>Video</h2>
+                    <p>
+                        The <code>&lt;video&gt;</code> element is used to embed
+                        video content in an HTML document. The
+                        <code>controls</code> attribute adds video controls,
+                        like play, pause, and volume.
+                    </p>
+                    <article>
+                        <video controls>
+                            <source
+                                src="https://www.w3schools.com/html/mov_bbb.mp4"
+                                type="video/mp4"
+                            />
+                            Your browser does not support the video element.
+                        </video>
+                    </article>
+                    <h3>The <code>&lt;source&gt;</code> element</h3>
+                    <p>
+                        The <code>&lt;source&gt;</code> element performs different functions depending on the context in which it is used. In the context of the <code>&lt;video&gt;</code> element, the <code>&lt;source&gt;</code> element is used to specify alternative video files which the browser may choose from. The browser will use the first recognized format. The <code>type</code> attribute is used to specify the media type of the <code>src</code> attribute.
+                    </p>
+                    <pre> <code> &lt;video controls&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    &lt;source src="movie.ogg" type="video/ogg"&gt;
+    Your browser does not support the video element.
+&lt;/video&gt; </code> </pre>
+
+                    <h3>The <code>&lt;track&gt;</code> element</h3>
+                    <p>
+                        The <code>&lt;track&gt;</code> element is used to specify text tracks for video elements. The <code>&lt;track&gt;</code> element is used in conjunction with the <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> elements. The <code>src</code> attribute specifies the URL of the track file. The <code>srclang</code> attribute specifies the language of the track text data. The <code>label</code> attribute specifies the title of the text track. The <code>kind</code> attribute specifies the kind of text track.
+                    </p>
+                    <pre> <code> &lt;video controls&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    &lt;track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English"&gt;
+    &lt;track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian"&gt;
+    Your browser does not support the video element.
+&lt;/video&gt; </code> </pre>
+
+                    <h3>Video Attributes</h3>
+                    <p>
+                        The <code>autoplay</code> attribute is used to specify that the video will start playing as soon as it is ready. The <code>loop</code> attribute is used to specify that the video will start over again, every time it is finished. The <code>preload</code> attribute is used to specify that the video will be loaded when the page loads.
+                    </p>
+                    <pre> <code> &lt;video controls autoplay loop preload="auto"&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    Your browser does not support the video element.
+&lt;/video&gt; </code> </pre>
+
+                    <h3>Video Events</h3>
+                    <p>
+                        The <code>onplay</code> event occurs when the video has started playing. The <code>onpause</code> event occurs when the video has been paused. The <code>onended</code> event occurs when the video has ended.
+                    </p>
+                    <pre> <code> &lt;video controls onplay="alert('The video has started playing.')" onpause="alert('The video has been paused.')" onended="alert('The video has ended.')"&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    Your browser does not support the video element.
+                        
+&lt;/video&gt; </code> </pre>
+
+                    <h3>Video Methods</h3>
+                    <p>
+                        The <code>play()</code> method starts playing the video. The <code>pause()</code> method pauses the video. The <code>load()</code> method reloads the video.
+                    </p>
+                    <pre> <code> &lt;video id="myVideo" controls&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    Your browser does not support the video element.
+&lt;/video&gt;
+
+&lt;script&gt;
+    var x = document.getElementById("myVideo");
+
+    function playVideo() {
+        x.play();
+    }
+
+    function pauseVideo() {
+        x.pause();
+    }
+
+&lt;/script&gt; </code> </pre>
+                </section>
+                <section id="aria">
+                    <h2>ARIA</h2>
+                    <p>
+                        ARIA stands for <strong>Accessible Rich Internet Applications.</strong>
+                        It is a set of attributes that define ways to make web
+                        content and web applications more accessible to people
+                        with disabilities. ARIA is used to improve the
+                        accessibility of web content for people with
+                        disabilities.
+                    </p>
+                    <h3>ARIA Roles</h3>
+                    <p>
+                        The <code>role</code> attribute is used to define the
+                        role of an element. The <code>role</code> attribute is
+                        used to define the purpose, structure, and state of an
+                        element.
+                    </p>
+                    <h3>ARIA States and Properties</h3>
+                    <p>
+                        <ul>
+                            <li>
+                                The <code>aria-checked</code> attribute is used
+                                to define the checked state of an element. 
+                                This lets screen readers know that the element is checked.
+                            </li>
+                            <li>
+                                The <code>aria-disabled</code> attribute is used
+                                to define the disabled state of an element. It lets
+                                the user know that the element is disabled.
+                            </li>
+                            <li>
+                                The <code>aria-hidden</code> attribute is used
+                                to define the hidden state of an element. 
+                                It is used to hide an element from the screen reader.
+                            </li>
+                            <li>
+                                The <code>aria-invalid</code> attribute is used
+                                to define the invalid state of an element. It can be used in forms
+                                to indicate that a field is invalid. PicoCSS uses this attribute to
+                                show a red border around the input field.
+                            </li>
+                            <li>
+                                The <code>aria-pressed</code> attribute is used
+                                to define the pressed state of an element. 
+                                It is used to indicate that a button is pressed.
+                            </li>
+                            <li>
+                                The <code>aria-selected</code> attribute is used
+                                to define the selected state of an element. 
+                                It is used to indicate that an element is selected.
+                            </li>
+                        </ul>
+                    </p>
+                    <h3>ARIA Landmarks</h3>
+                    <p>
+                        We used the <code>&lt;aside&gt;</code> element to create a navigation menu. You can check 
+                        the source code of this page to see how we used the <code>role</code> attribute to define the role of the <code>&lt;aside&gt;</code> element. 
+                    </p>
+                    <p>
+                        There are other semantic elements like the <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;section&gt;</code> elements that can be used to define the structure of a web page.
+                    </p>
+                    <p>
+                        They are called ARIA landmarks because they help to define the structure of a web page. They are used to define the main regions of a web page, like the header, footer, navigation, main content, and sidebars.
+                    </p>
+
+                    <h3>Learn more about ARIA</h3>
+                    <p>
+                        To learn more about ARIA, you can visit the
+                        <a
+                            href="https://www.w3.org/TR/wai-aria-1.1/"
+                            target="_blank"
+                            >W3C ARIA 1.1 Specification</a
+                        >.
+                    </p>
+                </section>
+            </main>
+
+            <footer class="container">
+                <hr />
+                <p>&copy; 2024</p>
+                <!-- Mode switcher button -->
+                <i
+                    id="theme-btn"
+                    aria-roledescription="theme button"
+                    class="fa-solid fa-sun"
+                ></i>
+            </footer>
+        </div>
+        <script src="semantic.js"></script>
+    </body>
+</html>
