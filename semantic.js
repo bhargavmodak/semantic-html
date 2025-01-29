@@ -57,3 +57,17 @@ time.textContent = new Date().toLocaleDateString('en-US', {
     day: 'numeric'
 });
 time.setAttribute('datetime', new Date().toISOString().split('T')[0]);
+
+// ---
+
+const dialog = document.querySelector('dialog');
+const dialogLauncher = document.getElementById('dialog-btn');
+const dialogCloser = document.getElementById('dialog-close');
+
+dialogLauncher.addEventListener('click', () => {
+    dialog.showModal();
+});
+
+dialogCloser.addEventListener('click', () => {
+    dialog.close();
+});
