@@ -29,6 +29,7 @@ aside {
     transform: translate(-100%);
     z-index: 9999;
     transition: 0.3s;
+    overflow-y: auto;
 }
 
 .aside-active {
@@ -57,4 +58,19 @@ aside {
     padding: 30px;
     margin-left: 200px;
     transition: 0.3s;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--pico-muted-color);
+    border-radius: 10px;
+    border: 3px solid var(--pico-background-color);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--pico-background-color);
 }
